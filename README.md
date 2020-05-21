@@ -20,12 +20,26 @@ poetry run flask run --host=0.0.0.0
 Build:
 
 ```bash
-docker build . -t verbose-fiesta:0.0.3
+docker build . -t verbose-fiesta:0.0.4
 ```
 
 Run:
 ```bash
-docker run --rm --name verbose-fiesta -v $PWD:/usr/src/app -p 5000:5000 verbose-fiesta:0.0.3
+docker run --rm --name verbose-fiesta -v $PWD:/usr/src/app -p 5000:5000 verbose-fiesta:0.0.4
+```
+
+## Compose
+
+Build:
+
+```bash
+docker-compose build
+```
+
+Run:
+
+```bash
+docker-compose up
 ```
 
 # Versions

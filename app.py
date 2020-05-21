@@ -15,4 +15,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return f'Hello, World! v{__version__}'
+    return f'Hello World!! v{__version__}'
