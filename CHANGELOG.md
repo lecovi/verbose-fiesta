@@ -12,3 +12,7 @@
 
 - Updates Dockerfile with Python 3.8
 - Adds CHANGELOG
+
+## v0.0.4
+
+- Adds docker-compose.yml
