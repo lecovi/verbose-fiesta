@@ -27,3 +27,7 @@ Run:
 ```bash
 docker run --rm --name verbose-fiesta -v $PWD:/usr/src/app -p 5000:5000 verbose-fiesta:0.0.3
 ```
+
+# Versions
+
+See [CHANGELOG](CHANGELOG.md) for more details.
