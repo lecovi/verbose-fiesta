@@ -1,5 +1,8 @@
 version: '3.7'
 
+volumes:
+    dbdata:
+  
 services:
     app:
         build: .
@@ -9,4 +12,22 @@ services:
         volumes:
             - .:/usr/src/app
         ports:
-            - "5000:5000"
+            - "${FLASK_RUN_PORT}:${FLASK_RUN_PORT}"
+
+    db:
+        image: postgres:latest
+        env_file: 
+            - .env
+        environment:
+            - POSTGRES_PASSWORD=${DB_PASSWORD}
+            - POSTGRES_USER=${DB_USER}
+            - POSTGRES_DB=${DB_NAME}
+        volumes:
+            - dbdata:/var/lib/postgresql/data/
+
+    pgadmin:
+        image: dpage/pgadmin4:latest
+        env_file:
+            - .env
+        ports:
+            - "${PGADMIN_PORT}:80"
