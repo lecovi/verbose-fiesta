@@ -16,3 +16,12 @@
 ## v0.0.4
 
 - Adds docker-compose.yml
+
+## v0.0.5
+
+- Adds Database support
+    - `GET /create_db` endpoint for creating DB schema
+    - `GET /users/` endpoint for getting all users
+    - `GET /users/{{pk}}` endpoint for getting users with id=pk
+    - `POST /users/` endpoint for creating users with username and email
+- Changes Docker image from Alpine to Debian Slim Buster

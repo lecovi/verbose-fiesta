@@ -1,5 +1,5 @@
 # verbose-fiesta
-A Flask Hello World example
+A Flask Hello World example with a database!
 
 ## Install
 
@@ -9,26 +9,9 @@ poetry install
 
 You can use `pipenv` if you prefer.
 
-## Run
+## Docker Compose
 
-```bash
-poetry run flask run --host=0.0.0.0
-```
-
-### Docker
-
-Build:
-
-```bash
-docker build . -t verbose-fiesta:0.0.4
-```
-
-Run:
-```bash
-docker run --rm --name verbose-fiesta -v $PWD:/usr/src/app -p 5000:5000 verbose-fiesta:0.0.4
-```
-
-## Compose
+Create `.env` from `env.dist`.
 
 Build:
 
@@ -41,6 +24,8 @@ Run:
 ```bash
 docker-compose up
 ```
+
+Your app running port is defined with `FLASK_RUN_PORT`. You can check PGAdmin over `PGADMIN_PORT` at localhost.
 
 # Versions
 
